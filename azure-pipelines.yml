@@ -13,3 +13,6 @@ pool:
 steps:
 - script: dotnet test
   displayName: Executing 'dotnet test'
+
+- script: dotnet publish -c Release -r win10-x64
+  displayName: Publishing

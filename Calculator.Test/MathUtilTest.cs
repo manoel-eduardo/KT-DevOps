@@ -16,7 +16,7 @@ namespace Calculator.Test
         public void FailingTest()
         {
             var mathUtil = new MathUtil();
-            Assert.Equal(5, mathUtil.Add(2, 3));
+            Assert.Equal(5, mathUtil.Add(2, 2));
         }
     }
 }

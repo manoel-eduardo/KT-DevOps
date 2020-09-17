@@ -10,11 +10,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-stages:
-- stage: TestStage
-  jobs:
-    - job: TestJob
-    displayName: Init testJob
-    steps:
-    - script: dotnet test
-      displayName: Executing 'dotnet test'
+steps:
+- script: dotnet test
+  displayName: Executing 'dotnet test'

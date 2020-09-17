@@ -19,8 +19,13 @@ stages:
       displayName: Time to test it!
 
 - stage: Build
+  dependsOn: Test
   jobs: 
-  - job: dotnetBuildAgent
+  - job: buildWindows
     steps:
     - script: dotnet publish -c Release -r win10-x64
+      displayName: Time to publish it!
+  - job: buildLinux
+    steps:
+    - script: dotnet publish -c Release -r linux-x64
       displayName: Time to publish it!

@@ -1,9 +1,3 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-
 trigger:
 - master
 
@@ -19,13 +13,8 @@ stages:
       displayName: Time to test it!
 
 - stage: Build
-  dependsOn: Test
   jobs: 
-  - job: buildWindows
+  - job: dotnetBuildAgent
     steps:
     - script: dotnet publish -c Release -r win10-x64
-      displayName: Time to publish it!
-  - job: buildLinux
-    steps:
-    - script: dotnet publish -c Release -r linux-x64
       displayName: Time to publish it!

@@ -3,6 +3,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+
 trigger:
 - master
 
@@ -10,7 +11,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 stages:
-- stage: Test
-  displayName: Time to test it folks!
-  steps:
+- stage: TestStage
+  
+  jobs:
+    - job: TestJob
+    steps:
+    
     - script: dotnet test
+      displayName: Executing 'dotnet test'

@@ -10,9 +10,17 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- script: dotnet test
-  displayName: Time to test it!
+stages:
+- stage: Test
+  jobs: 
+  - job: dotnetTestAgent
+    steps:
+    - script: dotnet test
+      displayName: Time to test it!
 
-- script: dotnet publish -c Release -r win10-x64
-  displayName: Time to publish it!
+- stage: Build
+  jobs: 
+  - job: dotnetBuildAgent
+    steps:
+    - script: dotnet publish -c Release -r win10-x64
+      displayName: Time to publish it!

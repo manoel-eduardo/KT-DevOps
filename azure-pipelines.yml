@@ -12,10 +12,9 @@ pool:
 
 stages:
 - stage: TestStage
-  
   jobs:
     - job: TestJob
+    displayName: Init testJob
     steps:
-    
     - script: dotnet test
       displayName: Executing 'dotnet test'

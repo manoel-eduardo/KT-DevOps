@@ -9,6 +9,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-lastest'
   
-setps:
+steps:
 - script: dotnet test
   displayName: Time to test it!

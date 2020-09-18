@@ -2,6 +2,8 @@
 
 To create a .exe file: ```dotnet publish -c Release -r win10-x64```
 
+To run after build: ```Calculator/bin/Release/netcoreapp3.1/Calculator.exe```
+
 To test: ```dotnet test```
 
 ## Pipeline 1 - Only test

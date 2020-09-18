@@ -17,8 +17,8 @@ stages:
     - script: dotnet test
       displayName: 'Running tests'
 
-- stage: Build
-  dependsOn: Test
+- stage: StageBuild
+  dependsOn: StageTest
   jobs:
   - job: JobBuildWindows
     steps:

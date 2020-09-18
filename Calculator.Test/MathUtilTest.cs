@@ -1,5 +1,4 @@
 ﻿using Xunit;
-using Calculator;
 
 namespace Calculator.Test
 {
@@ -16,7 +15,9 @@ namespace Calculator.Test
         public void FailingTest()
         {
             var mathUtil = new MathUtil();
-            Assert.Equal(5, mathUtil.Add(2, 2));
+            int r = mathUtil.Add(2, 2);
+            bool test = (r < 4) && (r > 4);
+            Assert.True(test);
         }
     }
 }

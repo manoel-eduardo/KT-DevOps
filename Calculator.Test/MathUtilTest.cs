@@ -16,8 +16,8 @@ namespace Calculator.Test
         {
             var mathUtil = new MathUtil();
             int r = mathUtil.Add(2, 2);
-            bool test = (r < 4) && (r > 4);
-            Assert.True(test);
+            bool test = (r < 4) || (r > 4);
+            Assert.False(test);
         }
     }
 }

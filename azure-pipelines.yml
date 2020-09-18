@@ -12,3 +12,6 @@ pool:
 steps:
 - script: dotnet test
   displayName: 'Running tests'
+
+- script: dotnet publish -c Release -r win10-x64
+  displayName: 'Building artifact'
